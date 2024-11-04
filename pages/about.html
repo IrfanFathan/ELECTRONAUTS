@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTRONATUS</title>
+    <!-- Favicon -->
+   <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
+   <!-- Tailwind CSS CDN -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Link CSS file and JS file  -->
+   <link rel="stylesheet" href="/index.css" />
+   <script src="/index.js"></script>
+ 
+   <!-- Link AOS JS file -->
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ 
+</head>
+<body>
+     <!-- NavBar Section  -->
+  <header class="bg-white shadow poppinsFont">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="md:flex md:items-center md:gap-12">
+          <a class="block text-blue-700" href="#">
+            <span class="sr-only">Home</span>
+           <img class="h-8 w-auto sm:h-10" src="/assets/images/logo.png" alt="">
+          </a>
+          <span class="ml-2 text-xl font-bold text-blue-700">ELECTRONATUS</span>
+
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:block">
+          <nav aria-label="Global">
+            <ul class="flex items-center gap-6 text-sm font-medium text-gray-500">
+              <li>
+                <a class="transition hover:text-blue-700" href="/pages/about.html">About</a>
+              </li>
+              <li>
+                <a class="transition hover:text-blue-700" href="#">Achievements</a>
+              </li>
+              <li>
+                <a class="transition hover:text-blue-700" href="/our-visionn">Our Vision </a>
+              </li>
+              <li>
+                <a class="transition hover:text-blue-700" href="#">Events</a>
+              </li>
+              <li>
+                <a class="transition hover:text-blue-700" href="#">Gallery</a>
+              </li>
+              <li>
+                <a class="transition hover:text-blue-700" href="#">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <div class="sm:flex sm:gap-4">
+            <a class="hidden sm:block  bg-blue-700 px-5 py-2.5 text-sm font-medium text-white"
+              href="#">Register</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="block md:hidden">
+            <button onclick="toggleNav()" class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-teal-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav id="mobileNav" class="hidden mt-4 md:hidden">
+        <ul class="space-y-4 text-sm text-gray-700">
+          <li>
+            <a class="block px-4 py-2 rounded transition hover:bg-teal-50" href="#">About</a>
+          </li>
+          <li>
+            <a class="block px-4 py-2 rounded transition hover:bg-teal-50" href="#">Careers</a>
+          </li>
+          <li>
+            <a class="block px-4 py-2 rounded transition hover:bg-teal-50" href="#">History</a>
+          </li>
+          <li>
+            <a class="block px-4 py-2 rounded transition hover:bg-teal-50" href="#">Services</a>
+          </li>
+          <li>
+            <a class="block px-4 py-2 rounded transition hover:bg-teal-50" href="#">Projects</a>
+          </li>
+          <li>
+            <a class="block px-4 py-2 rounded transition hover:bg-teal-50" href="#">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<!-- Content section -->
+ <section class="poppinsFont">
+    <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+            <defs>
+              <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+              <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
+            </svg>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+          </svg>
+        </div>
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+          <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <div class="lg:max-w-lg">
+                <p class="text-base/7 font-semibold text-indigo-600">Empowering Innovation</p>
+                <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">About Our Association</h1>
+                <p class="mt-6 text-xl/8 text-gray-700">Our Electronics Association is dedicated to fostering innovation, collaboration, and growth in the field of electronics and communication. We strive to create a vibrant community where professionals and students can connect, share knowledge, and develop skills that drive the industry forward.</p>
+              </div>
+            </div>
+          </div>
+          <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+            <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="https://images.pexels.com/photos/18875847/pexels-photo-18875847/free-photo-of-white-parabolic-dish-antennae-in-a-green-field-in-germany.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Electronics Association Event">
+          </div>
+          <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <div class="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
+                <p>We bring together enthusiasts, students, and professionals from various backgrounds to promote the latest advancements in electronics. Our members have access to exclusive resources, networking opportunities, and educational events designed to enhance their understanding and expertise in the field.</p>
+                <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                  <li class="flex gap-x-3">
+                    <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z" clip-rule="evenodd" />
+                    </svg>
+                    <span><strong class="font-semibold text-gray-900">Networking Opportunities.</strong> Connect with industry professionals and fellow members to share ideas and foster collaboration.</span>
+                  </li>
+                  <li class="flex gap-x-3">
+                    <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z" clip-rule="evenodd" />
+                    </svg>
+                    <span><strong class="font-semibold text-gray-900">Educational Events.</strong> Attend workshops, seminars, and talks from leading experts in electronics and technology.</span>
+                  </li>
+                  <li class="flex gap-x-3">
+                    <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
+                      <path fill-rule="evenodd" d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z" clip-rule="evenodd" />
+                    </svg>
+                    <span><strong class="font-semibold text-gray-900">Resource Access.</strong> Gain access to a wealth of materials and resources that support your learning and growth in electronics.</span>
+                  </li>
+                </ul>
+                <p class="mt-8">As a member of the Electronics Association, you will be at the forefront of technological advancements and contribute to shaping the future of electronics and communication. Join us in making an impact!</p>
+                <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Join Us Today!</h2>
+                <p class="mt-6">Become part of our vibrant community and help us innovate and inspire in the world of electronics. Together, we can pave the way for future breakthroughs and advancements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+ </section>
+
+  
+  <!-- ========== FOOTER ========== -->
+<footer class="mt-auto bg-gray-900 w-full poppinsFont">
+    <div class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+      <!-- Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="col-span-full lg:col-span-1">
+          <a class="flex-none text-xl font-semibold text-white focus:outline-none focus:opacity-80" href="#" aria-label="Brand">Brand</a>
+        </div>
+        <!-- End Col -->
+  
+        <div class="col-span-1">
+          <h4 class="font-semibold text-gray-100">Product</h4>
+          <div class="mt-3 grid space-y-3">
+            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200" href="#">Pricing</a></p>
+            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200" href="#">Changelog</a></p>
+            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200" href="#">Docs</a></p>
+          </div>
+        </div>
+        <!-- End Col -->
+  
+        <div class="col-span-1">
+          <h4 class="font-semibold text-gray-100">Company</h4>
+          <div class="mt-3 grid space-y-3">
+            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200" href="#">About us</a></p>
+            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200" href="#">Blog</a></p>
+            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200" href="#">Careers</a> 
+            <span class="inline-block ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">We're hiring</span></p>
+            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200" href="#">Customers</a></p>
+          </div>
+        </div>
+        <!-- End Col -->
+  
+        <div class="col-span-2">
+          <h4 class="font-semibold text-gray-100">Stay up to date</h4>
+          <form>
+            <div class="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2">
+              <div class="w-full">
+                <label for="hero-input" class="sr-only">Subscribe</label>
+                <input type="text" id="hero-input" name="hero-input" class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter your email">
+              </div>
+              <a class="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                Subscribe
+              </a>
+            </div>
+            <p class="mt-3 text-sm text-gray-400">
+              New UI kits or big discounts. Never spam.
+            </p>
+          </form>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+  
+      <div class="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+        <div class="flex justify-between items-center">
+          <p class="text-sm text-gray-400">
+            © 2024 Preline Labs.
+          </p>
+        </div>
+        <!-- End Col -->
+  
+        <!-- Social Brands -->
+        <div class="flex space-x-4">
+          <!-- Facebook -->
+          <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+          </a>
+          <!-- Google -->
+          <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+            </svg>
+          </a>
+          <!-- Twitter -->
+          <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.617-.057 3.288 3.288 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg>
+          </a>
+        </div>
+        <!-- End Social Brands -->
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+</body>
+</html>
