@@ -76,4 +76,29 @@
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 }
+
+@keyframes gradient-wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-wave {
+  background-size: 200% 200%;
+  animation: gradient-wave 12s ease infinite;
+}
+
+.glass-card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.hover-tilt {
+  transition: transform 0.3s ease;
+}
+.hover-tilt:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+}
   
