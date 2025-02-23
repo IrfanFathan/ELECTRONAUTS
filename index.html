@@ -138,6 +138,7 @@
     </div>
   </div>
 </section>
+
 <!-- About Section -->
 <section class="poppinsFont bg-gradient-to-b from-gray-50 to-white">
   <div class="max-w-7xl mx-auto px-4 xl:px-0 pt-20 lg:pt-28 pb-16">
@@ -221,87 +222,135 @@
     </div>
   </div>
 </section>
+<!-- End Vision Section -->
+
 <!-- Recent Events Section -->
-<div class="bg-gray-900 py-10 poppinsFont">
-  <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
-    <!-- Title -->
-    <div class="max-w-2xl text-center mx-auto mb-10 lg:mb-14">
-      <h2 class="text-2xl font-bold md:text-4xl text-white">Recent Events by Electronics Association</h2>
-      <p class="mt-1 text-gray-400">Join us in exploring the latest innovations and trends in electronics.</p>
+<section class="bg-gradient-to-b from-gray-900 to-gray-800 py-16 poppinsFont">
+  <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+        Our Latest Engagements
+      </h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+        Explore groundbreaking events shaping the future of electronics and communication technology
+      </p>
     </div>
-    <!-- End Title -->
 
-    <!-- Grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 lg:mb-14">
-      <!-- Event Card -->
-      <a class="group flex flex-col bg-gray-800 border border-gray-700 shadow-md rounded-xl hover:shadow-lg transition" href="#" data-aos="fade-up" data-aos-duration="500">
-        <div class="aspect-w-16 aspect-h-9">
-          <img class="w-full object-cover rounded-t-xl" src="/assets/images/events/quiz.jpg" alt="Event Image">
+    <!-- Event Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <!-- Event Card 1 -->
+      <article class="group relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-blue-400/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/20"
+               data-aos="fade-up">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="/assets/images/events/quiz.jpg" alt="Quiz Competition" 
+               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+          <span class="absolute top-4 right-4 px-3 py-1 bg-blue-600/80 backdrop-blur text-sm rounded-full">
+            Live Now
+          </span>
         </div>
-        <div class="p-4 md:p-5">
-          <p class="mt-2 text-xs uppercase text-gray-500">Quiz</p>
-          <h3 class="mt-2 text-lg font-medium text-white group-hover:text-blue-400">TECHNO-QUIZ Competition</h3>
-        </div>
-      </a>
-      <!-- End Event Card -->
-
-      <!-- Event Card -->
-      <a class="group flex flex-col bg-gray-800 border border-gray-700 shadow-md rounded-xl hover:shadow-lg transition" href="#" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-        <div class="aspect-w-16 aspect-h-9">
-          <img class="w-full object-cover rounded-t-xl" src="/assets/images/events/python.jpg" alt="Event Image">
-        </div>
-        <div class="p-4 md:p-5">
-          <p class="mt-2 text-xs uppercase text-gray-500">Workshop</p>
-          <h3 class="mt-2 text-lg font-medium text-white group-hover:text-blue-400">Python Tune Up</h3>
-        </div>
-      </a>
-      <!-- End Event Card -->
-
-      <!-- Event Card -->
-      <a class="group flex flex-col bg-gray-800 border border-gray-700 shadow-md rounded-xl hover:shadow-lg transition" href="#" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-        <div class="aspect-w-16 aspect-h-9">
-          <img class="w-full object-cover rounded-t-xl" src="/assets/images/events/automation.jpg" alt="Event Image">
-        </div>
-        <div class="p-4 md:p-5">
-          <p class="mt-2 text-xs uppercase text-gray-500">Seminar</p>
-          <h3 class="mt-2 text-lg font-medium text-white group-hover:text-blue-400">Industry Talk Show</h3>
-        </div>
-      </a>
-      <!-- End Event Card -->
-
-      <!-- Event Card -->
-      <a class="group flex flex-col bg-gray-800 border border-gray-700 shadow-md rounded-xl hover:shadow-lg transition" href="#" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-        <div class="aspect-w-16 aspect-h-9">
-          <img class="w-full object-cover rounded-t-xl" src="/assets/images/events/inauguration.jpg" alt="Event Image">
-        </div>
-        <div class="p-4 md:p-5">
-          <p class="mt-2 text-xs uppercase text-gray-500">Seminar</p>
-          <h3 class="mt-2 text-lg font-medium text-white group-hover:text-blue-400">Association inauguration</h3>
-        </div>
-      </a>
-      <!-- End Event Card -->
-    </div>
-    <!-- End Grid -->
-
-    <!-- Read More Section -->
-    <div class="text-center">
-      <div class="inline-block bg-gray-800 border border-gray-700 shadow-md rounded-full">
-        <div class="py-3 px-4 flex items-center gap-x-2">
-          <p class="text-gray-400">Want to see more events?</p>
-          <a class="inline-flex items-center gap-x-1.5 text-blue-400 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="/pages/events.html">
-            Go here
-            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m9 18 6-6-6-6"/>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-blue-400 mb-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>
-          </a>
+            <span>Oct 15, 2023</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+            TECHNO-QUIZ Championship
+          </h3>
+          <p class="text-gray-400 line-clamp-3">
+            Test your technical knowledge in our annual inter-college competition with exciting prizes and recognition
+          </p>
         </div>
-      </div>
-    </div>
-    <!-- End Read More Section -->
-  </div>
-</div>
-<!-- End Recent Events Section -->
+      </article>
 
+      <!-- Event Card 2 -->
+      <article class="group relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-purple-400/30 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-900/20"
+               data-aos="fade-up" data-aos-delay="100">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="/assets/images/events/python.jpg" alt="Python Workshop" 
+               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-purple-400 mb-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span>Workshop Series</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+            Python Power Session
+          </h3>
+          <p class="text-gray-400 line-clamp-3">
+            Master Python programming with hands-on sessions covering automation, data analysis, and IoT integration
+          </p>
+        </div>
+      </article>
+
+      <!-- Event Card 3 -->
+      <article class="group relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-green-400/30 transition-all duration-300 hover:shadow-2xl hover:shadow-green-900/20"
+               data-aos="fade-up" data-aos-delay="200">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="/assets/images/events/automation.jpg" alt="Industry Talk" 
+               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-green-400 mb-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            <span>Industry Connect</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
+            Future Tech Symposium
+          </h3>
+          <p class="text-gray-400 line-clamp-3">
+            Interactive panel discussion with industry leaders on AI, automation, and smart manufacturing trends
+          </p>
+        </div>
+      </article>
+
+      <!-- Event Card 4 -->
+      <article class="group relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 hover:border-pink-400/30 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-900/20"
+               data-aos="fade-up" data-aos-delay="300">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="/assets/images/events/inauguration.jpg" alt="Inauguration" 
+               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-pink-400 mb-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+            <span>Annual Event</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">
+            Grand Inauguration Fest
+          </h3>
+          <p class="text-gray-400 line-clamp-3">
+            Celebrating new beginnings with tech exhibitions, student projects showcase, and innovation challenges
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center" data-aos="fade-up">
+      <a href="/pages/events.html" 
+         class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group">
+        Explore All Events
+        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
 
 
 
