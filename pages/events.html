@@ -17,7 +17,7 @@
    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
  
 </head>
-<body>
+<body class="poppinsFont">
      <!-- NavBar Section  -->
   <header class="bg-white shadow poppinsFont">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -102,6 +102,137 @@
     </div>
   </header>
 
+
+
+
+
+
+  <!-- ========== HERO ========== -->
+    <!-- Events Page Content -->
+    <main class="min-h-screen bento-grid bg-gray-50">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <!-- Header -->
+          <div class="text-center mb-16" data-aos="fade-up">
+              <h1 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                  Upcoming Events
+              </h1>
+              <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Discover our exciting lineup of technical events, workshops, and competitions
+              </p>
+          </div>
+
+          <!-- Bento Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+              <!-- Featured Event -->
+              <article class="gradient-border rounded-2xl p-1 md:col-span-2 row-span-2 relative overflow-hidden group">
+                  <div class="event-card h-full rounded-xl p-8 flex flex-col justify-end">
+                      <span class="text-blue-600 font-medium mb-2">Featured Event</span>
+                      <h2 class="text-3xl font-bold text-gray-900 mb-4">National Level Tech Fest</h2>
+                      <div class="flex items-center gap-4 text-gray-600 mb-6">
+                          <div class="flex items-center gap-2">
+                              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                              </svg>
+                              <span>24-26 Oct 2024</span>
+                          </div>
+                          <div class="flex items-center gap-2">
+                              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                              </svg>
+                              <span>College Campus</span>
+                          </div>
+                      </div>
+                      <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700">
+                          Register Now
+                          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                          </svg>
+                      </a>
+                  </div>
+              </article>
+
+              <!-- Workshop Card -->
+              <article class="gradient-border rounded-2xl p-1 relative overflow-hidden group">
+                  <div class="event-card h-full rounded-xl p-6 flex flex-col">
+                      <div class="flex-1">
+                          <span class="text-purple-600 font-medium text-sm">Workshop</span>
+                          <h3 class="text-xl font-bold text-gray-900 mt-2 mb-4">IoT & Embedded Systems</h3>
+                          <p class="text-gray-600 text-sm line-clamp-3">
+                              Hands-on workshop covering IoT fundamentals, sensor integration, and cloud connectivity...
+                          </p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4">
+                          <span class="text-sm text-gray-500">15 Sept 2024</span>
+                          <a href="#" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                              Details →
+                          </a>
+                      </div>
+                  </div>
+              </article>
+
+              <!-- Hackathon Card -->
+              <article class="gradient-border rounded-2xl p-1 relative overflow-hidden group">
+                  <div class="event-card h-full rounded-xl p-6 flex flex-col">
+                      <div class="flex-1">
+                          <span class="text-pink-600 font-medium text-sm">Hackathon</span>
+                          <h3 class="text-xl font-bold text-gray-900 mt-2 mb-4">24-Hour Code Sprint</h3>
+                          <p class="text-gray-600 text-sm line-clamp-3">
+                              Annual coding marathon focusing on AI solutions for real-world problems...
+                          </p>
+                      </div>
+                      <div class="flex items-center justify-between mt-4">
+                          <span class="text-sm text-gray-500">30 Nov 2024</span>
+                          <a href="#" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                              Details →
+                          </a>
+                      </div>
+                  </div>
+              </article>
+
+              <!-- Seminar Card -->
+              <article class="gradient-border rounded-2xl p-1 md:col-span-2 relative overflow-hidden group">
+                  <div class="event-card h-full rounded-xl p-8 flex flex-col justify-end bg-[url('/assets/images/event-bg.jpg')] bg-cover bg-center">
+                      <div class="backdrop-blur-sm bg-white/80 p-6 rounded-lg">
+                          <span class="text-green-600 font-medium">Guest Lecture</span>
+                          <h3 class="text-2xl font-bold text-gray-900 mt-2">Future of AI in Electronics</h3>
+                          <div class="flex items-center gap-4 mt-4 text-gray-600">
+                              <div class="flex items-center gap-2">
+                                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                  </svg>
+                                  <span>2:00 PM</span>
+                              </div>
+                          </div>
+                          <a href="#" class="mt-4 inline-flex items-center text-blue-600 font-medium hover:text-blue-700">
+                              Join Session
+                              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                              </svg>
+                          </a>
+                      </div>
+                  </div>
+              </article>
+          </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
+              <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+              <p class="text-gray-200 mb-6 max-w-xl mx-auto">
+                  Subscribe to our newsletter for event updates, workshop schedules, and exclusive content
+              </p>
+              <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                  <input type="email" placeholder="Enter your email" 
+                         class="flex-1 px-6 py-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-white">
+                  <button class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                      Subscribe
+                  </button>
+              </form>
+          </div>
+      </section>
+  </main>
 
   
   <!-- ========== FOOTER ========== -->
