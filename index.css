@@ -17,7 +17,7 @@
   .parallax-container:hover .parallax-image {
     transform: translateZ(-20px) scale(1.05); /* Slightly zoomed on hover */
   }
-
+/* Animation */
   @keyframes bounce-slow {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }

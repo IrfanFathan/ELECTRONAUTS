@@ -640,28 +640,87 @@
 
 
 
-<!-- Testimonial -->
-<section class="poppinsFont relative isolate overflow-hidden bg-gray-50 px-6 py-24 sm:py-32 lg:px-8" data-aos="fade-up">
-  <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
-  <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
-  <div class="mx-auto max-w-2xl lg:max-w-4xl">
-    <img class="mx-auto h-12" src="/assets/images/logo.png" alt="Association Logo">
-    <figure class="mt-10">
-      <blockquote class="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
-        <p>“Our ECE students are shaping the future of technology. Their creativity and innovation make us proud. We are committed to fostering an environment where they can thrive and excel.”</p>
+<!-- Testimonial Section -->
+<section class="poppinsFont relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 py-24 sm:py-32 px-6 lg:px-8" data-aos="fade-up">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 -z-1">
+    <div class="absolute w-72 h-72 bg-blue-200/30 rounded-full -top-20 -left-20 animate-pulse-slow"></div>
+    <div class="absolute w-96 h-96 bg-purple-200/20 rounded-full -bottom-40 -right-40 animate-pulse-slow-delayed"></div>
+  </div>
+
+  <div class="mx-auto max-w-2xl lg:max-w-4xl relative">
+    <!-- Logo Animation -->
+    <div class="flex justify-center mb-12" data-aos="zoom-in">
+      <img class="h-16 w-auto hover:rotate-[360deg] transition-transform duration-1000" 
+           src="/assets/images/logo.png" 
+           alt="Association Logo">
+    </div>
+
+    <!-- Testimonial Card -->
+    <figure class="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl shadow-blue-100/50 hover:shadow-3xl hover:shadow-blue-200/50 transition-all duration-500 p-8 sm:p-12">
+      <!-- Quote Decoration -->
+      <div class="absolute top-0 left-8 -translate-y-1/2 text-blue-600/20 text-9xl font-bold">“</div>
+      
+      <blockquote class="relative">
+        <!-- Animated Quote Text -->
+        <p class="text-2xl sm:text-3xl/normal text-gray-800 font-medium text-center leading-relaxed 
+                  before:content-['“'] before:text-5xl before:absolute before:-left-4 before:-top-4 before:text-blue-600/30
+                  after:content-['”'] after:text-5xl after:absolute after:-right-4 after:-bottom-8 after:text-blue-600/30
+                  transition-all group-hover:text-gray-900">
+          Our ECE students are shaping the future of technology. Their creativity and innovation make us proud. We are committed to fostering an environment where they can thrive and excel.
+        </p>
       </blockquote>
-      <figcaption class="mt-10">
-        <img class="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1512901868280-09a5dcb3aa7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3MTN8MHwxfGFsbHwxfHx8fHx8fHwxNjE4NzIzMDI3&ixlib=rb-1.2.1&q=80&w=256" alt="Principal Photo">
-        <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-          <div class="font-semibold text-gray-900">Dr. Jane Smith</div>
-          <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
-            <circle cx="1" cy="1" r="1" />
-          </svg>
-          <div class="text-gray-600">Principal, ECE Department</div>
+
+      <!-- Author Info -->
+      <figcaption class="mt-8 flex flex-col items-center space-y-4">
+        <div class="relative">
+          <img class="h-16 w-16 rounded-full border-4 border-white shadow-lg hover:scale-110 transition-transform 
+                      hover:border-blue-200 hover:shadow-blue-200/30" 
+               src="https://images.unsplash.com/photo-1512901868280-09a5dcb3aa7a" 
+               alt="Principal Photo">
+          <div class="absolute -right-2 -bottom-2 bg-blue-600 text-white rounded-full p-1.5">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <p class="text-lg font-semibold text-gray-900 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Dr. Jane Smith
+          </p>
+          <p class="text-sm text-gray-600 mt-1">Principal, ECE Department</p>
         </div>
       </figcaption>
     </figure>
+
+    <!-- Floating Elements -->
+    <div class="absolute -top-12 -right-12 w-24 h-24 bg-blue-600/10 rounded-full animate-float"></div>
+    <div class="absolute -bottom-8 -left-8 w-16 h-16 bg-purple-600/10 rounded-full animate-float-delayed"></div>
   </div>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.05); opacity: 0.2; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .animate-pulse-slow {
+      animation: pulse 8s infinite;
+    }
+    .animate-pulse-slow-delayed {
+      animation: pulse 8s infinite 2s;
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: float 6s ease-in-out infinite 1.5s;
+    }
+  </style>
 </section>
 
 <!-- FAQ section -->
