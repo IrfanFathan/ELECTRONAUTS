@@ -17,3 +17,22 @@
   .parallax-container:hover .parallax-image {
     transform: translateZ(-20px) scale(1.05); /* Slightly zoomed on hover */
   }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes scroll-indicator {
+    0% { transform: translateY(-8px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(8px); opacity: 0; }
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 3s infinite;
+  }
+  
+  .animate-scroll {
+    animation: scroll-indicator 2s infinite;
+  }
