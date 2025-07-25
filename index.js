@@ -26,3 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     observer.observe(teamSection);
   });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }

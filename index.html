@@ -21,70 +21,111 @@
 </head>
 
 <body>
- <!-- Modern Minimal Navbar -->
-<header class="bg-white sticky top-0 z-50 poppinsFont shadow-sm transition-all duration-300 hover:shadow-md">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-20 items-center justify-between">
-      <!-- Logo Branding -->
-      <a href="#" class="flex items-center gap-3 group">
-        <img src="/assets/images/logo.png" alt="ELECTRONATUS" 
-             class="h-10 w-auto transition-transform duration-300 group-hover:rotate-[15deg]">
-        <span class="text-2xl font-bold text-gray-800">
-          <span class="text-blue-600">ELECTRO</span>NATUS
-        </span>
-      </a>
+<!-- Geometrical Shapes – Association Navbar with Poppins Font -->
+<header class="poppinsFont sticky top-0 z-50 font-sans">
+  <!-- Top quick menu bar -->
+  <div class="bg-gray-50 text-gray-600 text-sm">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-12 items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span class="hidden sm:inline font-medium">Quick Menu:</span>
+          <nav>
+            <ul class="flex items-center gap-4 sm:gap-6">
+              <li><a href="#" class="hover:text-gray-900 transition-colors">Resources</a></li>
+              <li><a href="#" class="hover:text-gray-900 transition-colors">Geometry Lab</a></li>
+              <li><a href="#" class="hover:text-gray-900 transition-colors">Workshops</a></li>
+              <li><a href="#" class="hover:text-gray-900 transition-colors">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:block">
-        <ul class="flex items-center gap-8">
-          <li>
-            <a href="/pages/about.html" 
-               class="text-gray-600 hover:text-blue-600 transition-colors relative
-                      after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 
-                      after:bg-blue-600 after:transition-all hover:after:w-full">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/pages/achievements.html" class="text-gray-600 hover:text-blue-600 transition-colors relative
-                      after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 
-                      after:bg-blue-600 after:transition-all hover:after:w-full">
-              Achievements
-            </a>
-          </li>
-          <li>
-            <a href="/our-vision" class="text-gray-600 hover:text-blue-600 transition-colors relative
-                      after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 
-                      after:bg-blue-600 after:transition-all hover:after:w-full">
-              Vision
-            </a>
-          </li>
-          <li>
-            <a href="/pages/events.html" class="text-gray-600 hover:text-blue-600 transition-colors relative
-                      after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 
-                      after:bg-blue-600 after:transition-all hover:after:w-full">
-              Events
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <!-- Socials + Search -->
+        <div class="flex items-center gap-4">
+          <a href="#" aria-label="Facebook" class="hover:text-gray-900 transition-colors">
+            <i class="fab fa-facebook-f text-base"></i>
+          </a>
+          <a href="#" aria-label="Twitter" class="hover:text-gray-900 transition-colors">
+            <i class="fab fa-twitter text-base"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="hover:text-gray-900 transition-colors">
+            <i class="fab fa-instagram text-base"></i>
+          </a>
+          <button aria-label="Search" class="hover:text-gray-900 transition-colors">
+            <i class="fas fa-search text-base"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <!-- CTA & Mobile Toggle -->
-      <div class="flex items-center gap-4">
-        <a href="#" class="hidden md:inline-flex items-center px-6 py-2.5 bg-blue-600 text-white 
-                      rounded-lg shadow-sm hover:bg-blue-700 hover:shadow-md transition-all
-                      border border-blue-600 hover:border-blue-700">
-          Join Now
+  <!-- Main nav -->
+  <div class="bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <img src="/assets/images/logo.png" alt="Geometry Association" class="h-12 w-auto">
+          <span class="poppinsFont text-2xl font-bold text-gray-800">ELECTRONATUS</span>
         </a>
-        <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center text-base text-gray-800">
+            <li><a href="#" class="px-4 py-2 hover:text-blue-600 transition-colors poppinsFont">Home</a></li>
+            <li class="text-gray-300">|</li>
+            <li><a href="#" class="px-4 py-2 hover:text-blue-600 transition-colors poppinsFont">Shapes</a></li>
+            <li class="text-gray-300">|</li>
+            <li><a href="#" class="px-4 py-2 hover:text-blue-600 transition-colors poppinsFont">Tutorials</a></li>
+            <li class="text-gray-300">|</li>
+            <li><a href="#" class="px-4 py-2 hover:text-blue-600 transition-colors poppinsFont">Tools</a></li>
+            <li class="text-gray-300">|</li>
+            <li><a href="#" class="px-4 py-2 hover:text-blue-600 transition-colors poppinsFont">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- CTA & Mobile Toggle -->
+        <div class="flex items-center gap-4">
+          <a href="#" class=" poppinsFont hidden md:inline-flex items-center px-5 py-2 bg-yellow-300 text-black rounded-full font-semibold hover:bg-yellow-400">
+            Report Shape Error
+          </a>
+          <button id="mobileToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#" class="block text-gray-700 hover:text-blue-600 poppinsFont">Home</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600 poppinsFont">Shapes</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600 poppinsFont">Tutorials</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600 poppinsFont">Tools</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600 poppinsFont">Contact</a>
+        <a href="#" class="poppinsFont mt-3 inline-flex w-full justify-center items-center px-6 py-3 rounded-full font-medium text-black bg-yellow-300 hover:bg-yellow-400">
+          Report Shape Error
+        </a>
       </div>
     </div>
   </div>
 </header>
+
+<script>
+  const toggle = document.getElementById('mobileToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- Note: Include Poppins via Google Fonts -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
+
+
+
 
 <!-- Modern Hero Section -->
 <section class="relative poppinsFont min-h-[70vh] flex items-center">
@@ -215,7 +256,7 @@
         <!-- Image/Graphic Placeholder -->
         <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
           <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
-            <img src="https://via.placeholder.com/600x400" alt="Vision Illustration" class="object-cover w-full h-full">
+            <img src="/assets/images/events/quiz.jpg" alt="Vision Illustration" class="object-cover w-full h-full">
           </div>
         </div>
       </div>
