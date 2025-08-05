@@ -1,0 +1,6 @@
+  <!-- About section -->
+    <!-- Upcoming events section -->
+    <!-- Project Showcase section -->
+    <!-- News And Announcements section -->
+    <!-- Testimonials section -->
+    <!-- Footer section -->
