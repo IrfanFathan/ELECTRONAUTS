@@ -1,111 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ELECTRONAUTS</title>
-    <link rel="stylesheet" href="/src/output.css">
-    <script src="/index.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELECTRONAUTS | Future of Electronics Innovation</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --primary-dark: #4f46e5;
+      --secondary: #0ea5e9;
+      --dark: #0f172a;
+      --darker: #0a0f1f;
+      --accent: #a855f7;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--darker);
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .animate-fadeIn {
+      animation: fadeIn 1.2s ease-out forwards;
+    }
+    
+    .animate-slideUp {
+      animation: slideUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Glassmorphism Effect */
+    .glass {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(99, 102, 241, 0.15);
+    }
+    
+    /* Neon Glow */
+    .glow {
+      box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+    }
+    
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary-light), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Custom Shapes */
+    .blob {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.2;
+      z-index: -1;
+    }
+    
+    .blob-1 {
+      background: var(--primary);
+      top: -200px;
+      right: -150px;
+    }
+    
+    .blob-2 {
+      background: var(--accent);
+      bottom: -200px;
+      left: -150px;
+    }
+    
+    /* Particles Effect */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(129, 140, 248, 0.3);
+      animation: float 15s infinite linear;
+    }
+  </style>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            'primary-light': '#818cf8',
+            'primary-dark': '#4f46e5',
+            secondary: '#0ea5e9',
+            dark: '#0f172a',
+            darker: '#0a0f1f',
+            accent: '#a855f7',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body class="bg-[#050d26] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-800/20 via-blue-900 to-black min-h-screen text-white font-sans">
+<body class="relative overflow-x-hidden">
+  <!-- Background Elements -->
+  <div class="particles" id="particles"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 px-4 py-3 glass">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div class="text-white text-xl font-bold tracking-tight">ELECTRONAUTS</div>
+      </div>
 
-    <!-- Hero Section -->
-    <section
-        class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden bg-[url('/assets/images/utils/background.png')] bg-cover bg-center ">
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="text-gray-300 hover:text-white transition font-medium">Home</a>
+        <a href="#about" class="text-gray-300 hover:text-white transition font-medium">About</a>
+        <a href="#projects" class="text-gray-300 hover:text-white transition font-medium">Projects</a>
+        
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-gray-300 hover:text-white transition font-medium">
+            Pages
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block mt-2 glass rounded-xl shadow-xl p-2 space-y-2 w-40">
+            <a href="#team" class="block px-4 py-2 rounded-lg hover:bg-primary/10 transition">Team</a>
+            <a href="#faqs" class="block px-4 py-2 rounded-lg hover:bg-primary/10 transition">FAQs</a>
+          </div>
+        </div>
+        
+        <!-- CTA -->
+        <a href="#contact" class="bg-gradient-to-r from-primary to-secondary px-5 py-2 rounded-full text-white font-semibold shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1">
+          CONTACT US
+        </a>
+      </div>
 
-      <!-- Navbar -->
-       <nav class="w-full fixed top-0 z-50 px-6 py-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
-
-    <!-- Logo -->
-    <div class="text-white text-2xl font-bold tracking-wide">
-      Maxira
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
     </div>
 
-    <!-- Nav Center -->
-    <div class="bg-gradient-to-r from-[#0d2b5c] to-[#0b1a40] bg-opacity-50 backdrop-blur-md px-4 py-2 rounded-full flex items-center space-x-6 shadow-md border border-white/10">
-      <a href="#home" class="text-black bg-white px-4 py-2 rounded-full font-medium text-sm transition">
-        Home
-      </a>
-      <a href="#about" class="text-gray-300 hover:text-white font-medium text-sm transition">
-        About
-      </a>
-      <a href="#project" class="text-gray-300 hover:text-white font-medium text-sm transition">
-        Project
-      </a>
-      <div class="relative group">
-        <button class="text-gray-300 hover:text-white font-medium text-sm transition flex items-center gap-1">
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 py-6 glass rounded-xl mt-2 space-y-4">
+      <a href="#home" class="block text-white font-medium">Home</a>
+      <a href="#about" class="block text-white font-medium">About</a>
+      <a href="#projects" class="block text-white font-medium">Projects</a>
+      
+      <div>
+        <button id="pages-btn" class="flex items-center gap-1 text-white font-medium w-full">
           Pages
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M19 9l-7 7-7-7" />
+          <svg class="w-4 h-4 ml-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
         </button>
-        <!-- Dropdown placeholder -->
-        <!-- <div class="absolute left-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg hidden group-hover:block">...</div> -->
+        <div id="pages-dropdown" class="ml-4 mt-2 hidden space-y-2">
+          <a href="#team" class="block text-gray-300">Team</a>
+          <a href="#faqs" class="block text-gray-300">FAQs</a>
+        </div>
+      </div>
+      
+      <a href="#contact" class="inline-block w-full text-center bg-gradient-to-r from-primary to-secondary text-white px-5 py-2.5 rounded-full font-semibold">
+        CONTACT US
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-darker via-dark to-[#0a0f1f] -z-20"></div>
+    
+    <!-- Content Container -->
+    <div class="max-w-4xl mx-auto z-10">
+      <!-- Trusted Users -->
+      <div class="flex items-center justify-center gap-4 mb-8 animate-fadeIn">
+        <div class="flex -space-x-3">
+          <img class="w-10 h-10 rounded-full border-2 border-white/20 shadow-md transition-all duration-300 hover:scale-110 hover:border-primary" src="https://i.pravatar.cc/100?img=1" alt="User 1">
+          <img class="w-10 h-10 rounded-full border-2 border-white/20 shadow-md transition-all duration-300 hover:scale-110 hover:border-primary" src="https://i.pravatar.cc/100?img=2" alt="User 2">
+          <img class="w-10 h-10 rounded-full border-2 border-white/20 shadow-md transition-all duration-300 hover:scale-110 hover:border-primary" src="https://i.pravatar.cc/100?img=3" alt="User 3">
+          <img class="w-10 h-10 rounded-full border-2 border-white/20 shadow-md transition-all duration-300 hover:scale-110 hover:border-primary" src="https://i.pravatar.cc/100?img=4" alt="User 4">
+        </div>
+        <p class="text-sm tracking-wide text-gray-400">Trusted by <span class="font-bold text-white">10,000+</span> innovators</p>
+      </div>
+
+      <!-- Hero Headline -->
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 z-10 animate-slideUp">
+        Built to spark your <br class="hidden md:block" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-secondary">next level innovation</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto animate-fadeIn">
+        Join ELECTRONAUTS and explore the future of electronics and innovation. We empower students to create groundbreaking projects that shape tomorrow.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slideUp">
+        <a href="#about" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-dark text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-primary/30 hover:scale-[1.03]">
+          Join the Community
+        </a>
+        <a href="#projects" class="px-8 py-3.5 rounded-full glass border border-white/10 text-white font-medium flex items-center justify-center gap-2 transition hover:bg-primary/10">
+          <span>Explore Projects</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto animate-fadeIn">
+        <div class="glass p-5 rounded-2xl">
+          <div class="text-3xl font-bold text-primary">250+</div>
+          <div class="text-gray-400 text-sm">Projects</div>
+        </div>
+        <div class="glass p-5 rounded-2xl">
+          <div class="text-3xl font-bold text-secondary">50+</div>
+          <div class="text-gray-400 text-sm">Workshops</div>
+        </div>
+        <div class="glass p-5 rounded-2xl">
+          <div class="text-3xl font-bold text-accent">10K+</div>
+          <div class="text-gray-400 text-sm">Members</div>
+        </div>
+        <div class="glass p-5 rounded-2xl">
+          <div class="text-3xl font-bold text-white">15+</div>
+          <div class="text-gray-400 text-sm">Awards</div>
+        </div>
       </div>
     </div>
+    
+    <!-- Floating Electronics -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center gap-6 animate-float">
+      <div class="w-16 h-16 rounded-xl glass border border-primary/20 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <div class="w-16 h-16 rounded-xl glass border border-secondary/20 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      </div>
+      <div class="w-16 h-16 rounded-xl glass border border-accent/20 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA Button -->
-    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-md transition">
-      CONTACT&nbsp;&nbsp;US
-    </a>
-  </div>
-</nav>
+  <!-- JavaScript -->
+  <script>
+    // Navbar functionality
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const pagesBtn = document.getElementById('pages-btn');
+    const pagesDropdown = document.getElementById('pages-dropdown');
 
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
-        <!-- Radial Glow Overlay -->
-        <div
-            class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800/30 via-blue-900 to-[#050d26] -z-20">
-        </div>
+    pagesBtn.addEventListener('click', () => {
+      pagesDropdown.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
 
-        <!-- Trusted Users -->
-        <div class="flex items-center gap-4 mb-4 z-10">
-            <div class="flex -space-x-3">
-                <img class="w-10 h-10 rounded-full border-2 border-white shadow-md"
-                    src="https://i.pravatar.cc/100?img=1" alt="User 1">
-                <img class="w-10 h-10 rounded-full border-2 border-white shadow-md"
-                    src="https://i.pravatar.cc/100?img=2" alt="User 2">
-                <img class="w-10 h-10 rounded-full border-2 border-white shadow-md"
-                    src="https://i.pravatar.cc/100?img=3" alt="User 3">
-                <img class="w-10 h-10 rounded-full border-2 border-white shadow-md"
-                    src="https://i.pravatar.cc/100?img=4" alt="User 4">
-            </div>
-            <p class="text-sm tracking-wide text-gray-300">Trusted by <span class="font-bold text-white">#10,000</span>
-                delighted members</p>
-        </div>
-
-        <!-- Hero Headline -->
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 z-10 drop-shadow-md">
-            Built to spark your <br />
-            <span class="italic font-light text-blue-200">next level</span> <span class="text-white">innovation</span>
-        </h1>
-
-        <!-- Subheadline -->
-        <p class="text-gray-400 mb-8 text-lg z-10 max-w-xl">
-            Join ELECTRONAUTS and explore the future of electronics and innovation.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex gap-6 justify-center z-10">
-            <a href="#about"
-                class="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition shadow-lg">
-                Join Now
-            </a>
-            <a href="#projects" class="text-blue-400 hover:text-blue-200 transition flex items-center gap-1">
-                Explore Projects <span>→</span>
-            </a>
-        </div>
-
-        <!-- Supporting Text -->
-        <p class="mt-10 text-xs tracking-wide text-gray-500 z-10">[ Empowering students to innovate through electronics
-            ]</p>
-    </section>
-
+    // Create particles
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Random size and position
+      const size = Math.random() * 6 + 2;
+      const posX = Math.random() * 100;
+      const posY = Math.random() * 100;
+      const delay = Math.random() * 15;
+      
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${posX}%`;
+      particle.style.top = `${posY}%`;
+      particle.style.animationDelay = `${delay}s`;
+      
+      particlesContainer.appendChild(particle);
+    }
+    
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slideUp');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
-
 </html>
